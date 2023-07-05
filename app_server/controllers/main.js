@@ -1,5 +1,5 @@
 
-//takes request and rendres on the response a page with titile
+/* GET Hompage */
 const index = (req, res) =>{
     res.render('index', {title: 'Travelr Getaways'});
 }
