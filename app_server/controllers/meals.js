@@ -1,6 +1,6 @@
 /* GET Meals Page */
 const meals = (req, res) => {
-    res.render('meal', { title: 'Travlr Getaways - Meal' });
+    res.render('meals', { title: 'Travlr Getaways - Meals' });
 };
 
 module.exports = {
