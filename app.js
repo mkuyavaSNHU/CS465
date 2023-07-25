@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const hbs = require('hbs');
+require("./app_api/database/db");
 
 var aboutRouter = require('./app_server/routes/about');
 var contactRouter = require('./app_server/routes/contact');
@@ -13,6 +14,9 @@ var newsRouter = require('./app_server/routes/news');
 var roomsRouter = require('./app_server/routes/rooms');
 var travelRouter = require('./app_server/routes/travel');
 var usersRouter = require('./app_server/routes/users'); 
+
+const apiRouter = require("./app_api/routes/index");
+
 
 
 
@@ -41,6 +45,7 @@ app.use('/rooms', roomsRouter)
 app.use('/travel', travelRouter);
 app.use('/users', usersRouter);
 
+app.use("/api", apiRouter);
 
 
 // catch 404 and forward to error handler
