@@ -97,7 +97,7 @@ const getUser = (req, res, callback) => {
   if (req.payload && req.payload.email) {
     user.findOne({ email: req.payload.email }).exec((err, user) => {
       if (!user) {
-        return res.status(404).json({ message: "User not found" });
+        return res.status(404).json({ message: "1User not found" });
       } else if (err) {
         console.log(err);
         return res.status(404).json(err);
@@ -105,7 +105,7 @@ const getUser = (req, res, callback) => {
       callback(req, res, user.name);
     });
   } else {
-    return res.status(404).json({ message: "User not found" });
+    return res.status(404).json({ message: "2User not found" });
   }
 };
 

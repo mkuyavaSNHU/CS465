@@ -4,7 +4,7 @@ const User = mongoose.model("users");
 
 const register = (req, res) => {
   if (!req.body.name || !req.body.email || !req.body.password) {
-    return res.status(400).json({ message: "1All fields required" });
+    return res.status(400).json({ message: "All fields required" });
   }
 
   const user = new User();
@@ -23,7 +23,7 @@ const register = (req, res) => {
 
 const login = (req, res) => {
   if (!req.body.email || !req.body.password) {
-    return res.status(400).json({ message: "2All fields required!" });
+    return res.status(400).json({ message: "All fields required!" });
   }
   passport.authenticate("local", (err, user, info) => {
     if (err) {
