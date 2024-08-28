@@ -12,9 +12,6 @@ Refactoring the API endpoints to have authentication was one of the most importa
 **Testing**
 Utilizing programs such as Postman or Studio T3 to verify that the requests were processed successfully and checking the Mongo data base directly through the PowerShell. 
 
-**Reflection** 
-Full Stack Development is an important skill, I learned a lot about client/server development and  REST APIs.
-
  
 
 
